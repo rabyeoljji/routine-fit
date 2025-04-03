@@ -1,4 +1,6 @@
 import { useFonts } from "expo-font";
+import "@/app\\global.css";
+import { GluestackUIProvider } from "@/components/ui/gluestack-ui-provider";
 import { Stack } from "expo-router";
 import * as SplashScreen from "expo-splash-screen";
 import { useEffect } from "react";
@@ -25,12 +27,12 @@ export default function RootLayout() {
    }
 
    return (
-      <>
+      <GluestackUIProvider>
          <Stack screenOptions={{ headerShown: false }}>
             <Stack.Screen name="+not-found" />
             <Stack.Screen name="index" options={{ title: "메인" }} />
          </Stack>
          <StatusBar />
-      </>
+      </GluestackUIProvider>
    );
 }

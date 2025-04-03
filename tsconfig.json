@@ -5,12 +5,25 @@
     "strict": true,
     "paths": {
       "@/*": [
-        "src/*"
+        "src/*",
+        "./*"
+      ],
+      "@types/*": [
+        "@types/*"
+      ],
+      "tailwind.config": [
+        "./tailwind.config.js"
       ]
     },
-    "moduleResolution": "node"
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "skipLibCheck": true,
+    "allowJs": true,
+    "jsx": "react-native",
+    "noEmit": true
   },
   "include": [
+    "@types",
     "**/*.ts",
     "**/*.tsx",
     ".expo/types/**/*.ts",
